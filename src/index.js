@@ -4,17 +4,19 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-let city = {
-  name: "Madrid",
-  country: "Spain",
+function Hello(){
+  return(
+    <div>
+      <h1>Welome to React!</h1>
+      <p>Let's build something cool.</p>
+    </div>
+  )
 }
 
-ReactDOM.render( 
-  <h1 id="heading" className = "cool-text">
-    {city.name} is in {city.country}.
-  </h1>,
+ReactDOM.render(
+  <Hello/>,
   document.getElementById("root")
-)
+);
 
 // ReactDOM.render(
 //   <React.StrictMode>
