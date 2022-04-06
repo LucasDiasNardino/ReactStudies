@@ -4,8 +4,13 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  React.createElement("h1", {style:{color: "red"}}, "Hello!"),
+ReactDOM.render( 
+  <ul>
+    <li>Hot Dogs</li>
+    <li>Hamburguers</li>
+    <li>Pizza</li>
+    <li>Sushi</li>
+  </ul>,
   document.getElementById("root")
 )
 
