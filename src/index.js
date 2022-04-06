@@ -22,15 +22,16 @@ function SkiResort({name}){
 
 
 function App(props){
-  if(props.season === "summer"){
-    return <Lake name="Jenny Lake"/>;
-  } else if(props.season === "winter"){
-    return <SkiResort name ="JHMR"/>
-  }
+  return(
+    <>
+      <Lake />
+      <SkiResort/>
+    </>
+  )
 }
 
 
 ReactDOM.render(
-  <App season="summer"/>,
+  <App />,
   document.getElementById("root")
 );
