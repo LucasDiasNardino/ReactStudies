@@ -8,10 +8,6 @@ function CheckBox(){
     false
   );
 
-  function toggle(){
-    setChecked();
-  }
-
   return(
     <>
       <input 
