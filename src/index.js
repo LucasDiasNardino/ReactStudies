@@ -4,21 +4,34 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-function Lake({name}){
-  return <h1>{name}</h1>;
+const lakeList = [
+  "Echo Lake",
+  "Maud Lake",
+  "Cascade Lake",
+];
+
+
+function App(props){
+  return (
+    <ul>
+      {props.lakes.map(lake => (
+      <li>{lake}</li>
+      ))}
+    </ul>
+  );
 }
 
-function App(){
-  return (
-    <div>
-      <Lake name="Lake Tahoe" />
-      <Lake name="Angora Lake" />
-      <Lake name="Shirley Lake"/>
-    </div>
-  )
-}
+// function App({lakes}){
+//   return (
+//     <ul>
+//       {lakes.map(lake => (
+//       <li>{lake}</li>
+//       ))}
+//     </ul>
+//   );
+// }
 
 ReactDOM.render(
-  <App/>,
+  <App lakes={lakeList}/>,
   document.getElementById("root")
 );
