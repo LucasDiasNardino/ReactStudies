@@ -4,26 +4,33 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-const lakeList = [
-  {id: "1", name:"Echo", trailhead: "Echo"},
-  {id: "2", name:"Maud", trailhead: "Wrights"},
-  {id: "3", name:"Velma", trailhead: "Bayview"},
-];
+function Lake({name}){
+  return(
+    <div>
+      <h1>Visit {name}!</h1>
+    </div>
+  );
+}
 
-const list = [1,2,3,4,5];
-
-function App({items}){
-  return (
-    <ul>
-      {items.map(item => (
-        <li key={item.toString()}>{item}</li>
-      ))}
-    </ul>
+function SkiResort({name}){
+  return(
+    <div>
+      <h1>Visit {name}!</h1>
+    </div>
   );
 }
 
 
+function App(props){
+  if(props.season === "summer"){
+    return <Lake name="Jenny Lake"/>;
+  } else if(props.season === "winter"){
+    return <SkiResort name ="JHMR"/>
+  }
+}
+
+
 ReactDOM.render(
-  <App items={list}/>,
+  <App season="summer"/>,
   document.getElementById("root")
 );
